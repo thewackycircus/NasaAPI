@@ -1,0 +1,140 @@
+/* colour palette
+red: #E54335
+blue: #283663
+yellow: #FBB033
+black: #333
+white: #f6f6f6 */
+
+body {
+    background: #f6f6f6;
+    font: 12px Lucida sand, Arial, helvetica, sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+/* searchbox */
+
+#searchBox {
+    background-color: #f6f6f6;
+    background-image: linear-gradient(#f6f6f6, #eae8e8);
+    border-color: #dedede #bababa #aaa #bababa ;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    box-shadow: 0 3px 3px rbga(255, 255, 255, .1), 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 5px #444;
+    margin: 100px auto;
+    overflow: hidden;
+    padding: 8px;
+    width: 90%;
+}
+
+#searchQuery {
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #fff;
+    border-radius: 3px;
+    float: left;
+    font: 16px Lucida Sans, Trebuchet MS, Tahoma, sans-serif;
+    height: 20px;
+    padding: 10px;
+}
+
+#searchQuery:focus {
+    border-color: #aaa;
+    box-shadow: 0 1px 1px #bbb inset;
+    outline: 0;
+}
+
+::placeholder {
+    color: #999;
+    font-weight: normal;
+}
+
+#searchBtn {
+    background-color: #0483a0;
+    background-image: linear-gradient(#31b2c3, #0483a0);
+    border: 1px solid #00748f;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #fff;
+    color: #fafafa;
+    cursor: pointer;
+    height: 42px;
+    float: right;
+    font: 15px Arial, Helvetica;
+    padding: 0;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 rbga(0, 0, 0, .3);
+    width: 120px;
+}
+
+#searchBtn:focus, #searchBtn:hover {
+    background-color: #31b2c3;
+    background-image: linear-gradient(#0483a0, #31b2c3);
+}
+
+#search:active {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    outline: 0;
+}
+
+/* search results */
+
+#searchResult {
+    width: 100%;
+    display: grid;
+}
+
+#searchResult div {
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    width: 100%;
+    height: auto;
+}
+
+#searchResult img {
+    width: 100%;
+    height: auto;
+}
+
+#searchResult div div#descriptionBox {
+    width: 90%;
+    height: auto;
+}
+
+#searchResult p {
+    padding: 15px;
+    text-align: center;
+}
+
+/* screen sizes */
+
+@media (min-width: 300px) {
+
+    #searchBox input {
+        width: 50%;
+    }
+
+    #searchResult {
+        grid-template-columns: 100%;
+    }
+}
+
+@media (min-width: 1280px) {
+    #searchBox input {
+        width: 85%;
+    }
+
+    #searchResult {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1920px) {
+
+    #searchBox input {
+        width: 90%;
+    }
+
+    #searchResult {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
